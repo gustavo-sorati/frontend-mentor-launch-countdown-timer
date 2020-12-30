@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+$grayish-blue: hsl(237, 18%, 59%);
+$soft-red: hsl(345, 95%, 68%);
+$white: hsl(0, 0%, 100%);
+$dark-desaturated-blue: hsl(236, 21%, 26%);
+$very-dark-blue: hsl(235, 16%, 14%);
+$very-dark-mostly-blue: hsl(234, 17%, 12%);
+
+@mixin responsivo($dispositivo) {
+  @if ($dispositivo == mobile) {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}
+
+@mixin font-base {
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+body {
+  background-color: $very-dark-blue;
+  background-image: url('/images/bg-stars.svg');
+  background-size: cover;
+  @include font-base;
+}

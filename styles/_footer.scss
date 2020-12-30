@@ -1,0 +1,38 @@
+footer {
+  height: 30vh;
+  width: 100vw;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    margin: auto;
+  }
+
+  .icons i {
+    opacity: 0.5;
+    transition: all 500ms;
+    cursor: pointer;
+  }
+
+  .icons i:hover {
+    opacity: 1;
+    color: $soft-red;
+  }
+
+  .attribution {
+    height: 25px;
+    background-color: $very-dark-blue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

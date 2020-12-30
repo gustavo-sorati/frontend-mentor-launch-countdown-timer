@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: #1e1f29;
+  background-image: url("/images/bg-stars.svg");
+  background-size: cover;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 700;
+  color: white; }
+
+main.app {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  background-position: 0 bottom;
+  background-size: 100%;
+  background-image: url("../images/pattern-hills.svg");
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 375px) {
+    main.app {
+      background-position: -840px bottom;
+      background-size: 380%; } }
+
+section {
+  height: 70vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: start; }
+  section h1 {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+    align-self: center;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+    color: white; }
+  section .chronometer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; }
+
+.chronometer .box {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(to bottom, #2a2c41, #2a2c41 49.5%, black, #343650, #343650 50.5%);
+  box-shadow: 0 10px 0px -2px #191a24;
+  z-index: 1;
+  border-radius: 8px;
+  perspective: 0;
+  transition: 0.2s; }
+  .chronometer .box .countdown-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    position: absolute;
+    top: 0; }
+  .chronometer .box .countdown-box span {
+    color: #fb6087;
+    font-size: 76px;
+    z-index: 2; }
+    .chronometer .box .countdown-box span::before, .chronometer .box .countdown-box span::after {
+      content: '';
+      width: 5px;
+      height: 10px;
+      background-color: #191a24;
+      display: flex;
+      position: absolute;
+      z-index: 2;
+      top: 65px; }
+    .chronometer .box .countdown-box span::before {
+      left: 0;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px; }
+    .chronometer .box .countdown-box span::after {
+      right: 0;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px; }
+
+.chronometer .text {
+  text-align: center;
+  opacity: 0.2;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 4px;
+  line-height: 1.8; }
+
+footer {
+  height: 30vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  footer .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: auto; }
+  footer .icons i {
+    opacity: 0.5;
+    transition: all 500ms;
+    cursor: pointer; }
+  footer .icons i:hover {
+    opacity: 1;
+    color: #fb6087; }
+  footer .attribution {
+    height: 25px;
+    background-color: #1e1f29;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+/*# sourceMappingURL=main.css.map */

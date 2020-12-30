@@ -1,0 +1,19 @@
+main.app {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+  height: 100vh;
+
+  background-position: 0 bottom;
+  background-size: 100%;
+  background-image: url('../images/pattern-hills.svg');
+  background-repeat: no-repeat;
+
+  @include responsivo(mobile) {
+    background-position: -840px bottom;
+    background-size: 380%;
+  }
+}
