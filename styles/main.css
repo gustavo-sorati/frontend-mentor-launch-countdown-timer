@@ -25,14 +25,14 @@ main.app {
   background-size: 100%;
   background-image: url("../images/pattern-hills.svg");
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 671px) {
     main.app {
       background-position: -840px bottom;
       background-size: 380%; } }
 
 section {
   height: 70vh;
-  width: 100vw;
+  margin: 0 auto;
   display: grid;
   justify-content: center;
   align-items: start; }
@@ -44,10 +44,17 @@ section {
     font-family: 'Red Hat Text', sans-serif;
     font-weight: 700;
     color: white; }
+    @media only screen and (max-width: 520px) {
+      section h1 {
+        font-size: 1rem;
+        letter-spacing: 4px; } }
   section .chronometer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px; }
+    @media only screen and (max-width: 520px) {
+      section .chronometer {
+        grid-template-columns: repeat(4, 60px); } }
 
 .chronometer .box {
   position: relative;
@@ -59,6 +66,14 @@ section {
   border-radius: 8px;
   perspective: 0;
   transition: 0.2s; }
+  @media only screen and (max-width: 671px) {
+    .chronometer .box {
+      width: 90px;
+      height: 90px; } }
+  @media only screen and (max-width: 520px) {
+    .chronometer .box {
+      width: 60px;
+      height: 60px; } }
   .chronometer .box .countdown-box {
     display: flex;
     align-items: center;
@@ -68,10 +83,22 @@ section {
     border-radius: 8px;
     position: absolute;
     top: 0; }
+    @media only screen and (max-width: 671px) {
+      .chronometer .box .countdown-box {
+        height: 90px; } }
+    @media only screen and (max-width: 520px) {
+      .chronometer .box .countdown-box {
+        height: 60px; } }
   .chronometer .box .countdown-box span {
     color: #fb6087;
     font-size: 76px;
     z-index: 2; }
+    @media only screen and (max-width: 671px) {
+      .chronometer .box .countdown-box span {
+        font-size: 36px; } }
+    @media only screen and (max-width: 520px) {
+      .chronometer .box .countdown-box span {
+        font-size: 22px; } }
     .chronometer .box .countdown-box span::before, .chronometer .box .countdown-box span::after {
       content: '';
       width: 5px;
@@ -81,6 +108,12 @@ section {
       position: absolute;
       z-index: 2;
       top: 65px; }
+      @media only screen and (max-width: 671px) {
+        .chronometer .box .countdown-box span::before, .chronometer .box .countdown-box span::after {
+          top: 40px; } }
+      @media only screen and (max-width: 520px) {
+        .chronometer .box .countdown-box span::before, .chronometer .box .countdown-box span::after {
+          top: 25px; } }
     .chronometer .box .countdown-box span::before {
       left: 0;
       border-top-right-radius: 8px;
@@ -97,6 +130,13 @@ section {
   font-size: 12px;
   letter-spacing: 4px;
   line-height: 1.8; }
+  @media only screen and (max-width: 671px) {
+    .chronometer .text {
+      font-size: 8px; } }
+  @media only screen and (max-width: 520px) {
+    .chronometer .text {
+      font-size: 8px;
+      letter-spacing: 1px; } }
 
 footer {
   height: 30vh;

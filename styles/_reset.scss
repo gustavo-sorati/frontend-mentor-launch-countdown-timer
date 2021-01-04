@@ -17,7 +17,11 @@ $very-dark-mostly-blue: hsl(234, 17%, 12%);
 
 @mixin responsivo($dispositivo) {
   @if ($dispositivo == mobile) {
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 671px) {
+      @content;
+    }
+  } @else if ($dispositivo == old) {
+    @media only screen and (max-width: 520px) {
       @content;
     }
   }

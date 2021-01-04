@@ -1,10 +1,13 @@
 section {
   height: 70vh;
-  width: 100vw;
-
+  margin: 0 auto;
   display: grid;
   justify-content: center;
   align-items: start;
+
+  // @include responsivo(old) {
+  //   width: 400px;
+  // }
 
   h1 {
     text-transform: uppercase;
@@ -12,12 +15,21 @@ section {
     text-align: center;
     align-self: center;
     @include font-base;
+
+    @include responsivo(old) {
+      font-size: 1rem;
+      letter-spacing: 4px;
+    }
   }
 
   .chronometer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @include responsivo(old) {
+      grid-template-columns: repeat(4, 60px);
+    }
   }
 }
 
@@ -35,6 +47,7 @@ section {
     #343650,
     #343650 50.5%
   );
+
   box-shadow: 0 10px 0px -2px $very-dark-mostly-blue;
 
   z-index: 1;
@@ -42,6 +55,16 @@ section {
   perspective: 0;
 
   transition: 0.2s;
+
+  @include responsivo(mobile) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @include responsivo(old) {
+    width: 60px;
+    height: 60px;
+  }
 
   .countdown-box {
     display: flex;
@@ -55,23 +78,27 @@ section {
     position: absolute;
     top: 0;
 
-    // &::after {
-    //   content: '';
-    //   width: 100%;
-    //   height: 1px;
-    //   opacity: 0.5;
-    //   z-index: 1;
-    //   background-color: $very-dark-mostly-blue;
-    //   position: absolute;
-    //   display: flex;
-    //   top: 75px;
-    // }
+    @include responsivo(mobile) {
+      height: 90px;
+    }
+
+    @include responsivo(old) {
+      height: 60px;
+    }
   }
 
   .countdown-box span {
     color: $soft-red;
     font-size: 76px;
     z-index: 2;
+
+    @include responsivo(mobile) {
+      font-size: 36px;
+    }
+
+    @include responsivo(old) {
+      font-size: 22px;
+    }
 
     &::before,
     &::after {
@@ -84,6 +111,14 @@ section {
 
       z-index: 2;
       top: 65px;
+
+      @include responsivo(mobile) {
+        top: 40px;
+      }
+
+      @include responsivo(old) {
+        top: 25px;
+      }
     }
 
     &::before {
@@ -109,4 +144,13 @@ section {
   font-size: 12px;
   letter-spacing: 4px;
   line-height: 1.8;
+
+  @include responsivo(mobile) {
+    font-size: 8px;
+  }
+
+  @include responsivo(old) {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
 }
