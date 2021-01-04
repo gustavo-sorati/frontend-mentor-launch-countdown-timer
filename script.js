@@ -23,7 +23,7 @@ let initCount = setInterval(() => {
 
   setTimeout(() => {
     box[3].style.transform = 'rotateX(0deg)';
-    box[3].style.boxShadow = '0 -10px 0px -2px #191a24';
+    box[3].style.boxShadow = '0 10px 0px -2px #191a24';
   }, 50);
 
   if (seconds === 59) {
